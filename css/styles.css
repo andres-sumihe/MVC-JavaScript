@@ -8,13 +8,33 @@ header {
 }
 
 .custom-row {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
-.card > img {
+.img-box > img {
     height: 200px;
 }
+.img-box {
+    overflow: hidden;
+}
+.img-box > img:hover {
+    transition: transform ease-in-out .5s;
+    transform: scale(1.2);
+}
+
 
 .card {
-    height: 480px;
+    height: 500px;
+    width: 300px;
+}
+
+.card:hover{
+    transition: all ease .5s;
+    -webkit-box-shadow: 10px 10px 21px -1px rgba(102,97,102,1);
+    -moz-box-shadow: 10px 10px 21px -1px rgba(102,97,102,1);
+    box-shadow: 10px 10px 21px -1px rgba(102,97,102,1);
+}
+.card-body > button {
+    position: absolute;
+    bottom: 10px;
 }
