@@ -1,10 +1,9 @@
-class App {
+class Controller {
     constructor(selector) {
         this.appElement = document.querySelector(selector)
         this.components =  {}
     }
     
-
     addComponent(component) {
         this.components[component.name] = component;
         component.model = this.proxify(component.model);
@@ -33,4 +32,4 @@ class App {
             }
         })
     }
-} export default App;
+} export default Controller;
