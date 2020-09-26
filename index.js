@@ -1,58 +1,32 @@
-import App from './lib/App.js';
+import Controller from './Controller/Controller.js'
 import Router from './lib/Router.js';
-import API from './lib/API.js';
+import Model from './Model/Model.js';
+import View from './View/View.js';
 
-const app = new App('#app');
-const router = new Router(app);
+const controller = new Controller('#app');
+const API = new Model();
+const router = new Router(controller);
+const view = new View();
 
-const dogTemplate = (dog) => `
-<section class="dog-listing">
-  <a href="#/dogs/${dog.id}">
-    <h3 class="name">${dog.name}</h3>
-    <section>
-      <figure>
-        <img src="${dog.url}" alt="${dog.name}" />
-        <figcaption>${dog.description}</figcaption>
-      </figure>
-      <p>${dog.description}</p>
-    </section>
-  </a>
-</section>
-`;
-
-app.addComponent({
-    name: 'dogs',
+controller.addComponent({
+    name: 'news',
     model: {
-        dogs: []
+        articles: []
     },
 
     view(model) {
-        return `
-      <ul class="dogs">
-        ${model.dogs.map(item => `<li>${dogTemplate(item)}<li>`).join('')}
-      </ul>
-    `;
+        return `<div class="row d-flex justify-content-center">
+          ${model.articles.map(item => {
+           return `${view.newsCard(item)}`
+          })}
+      </div>`;
     },
 
     async controller(model){
-        const dogs = await API.getDogs();
-        model.dogs = dogs;
+        const articles = await API.getArticles();
+        model.articles = articles;
+        console.log(articles)
     }
 })
-app.addComponent({
-    name: 'dog',
-    model: {
-        dog: []
-    },
 
-    view(model) {
-        return dogTemplate(model.dog);
-    },
-
-    async controller(model){
-        const dog = await API.getDog(router.params[1]);
-        model.dog = dog;
-    }
-})
-router.addRoute('dogs', '^#/dogs$');
-router.addRoute('dog', '^#/dogs/([0-9]+)$');
+router.addRoute('news', '');
