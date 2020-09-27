@@ -73,9 +73,57 @@
     
     <div id="app"></div>
     
+
+    <div class="author-info-wrap">
+        <div class="author-info popup">
+            <header>
+                The Team
+            </header>
+            <div class="team-box">
+                <div class="team-info-box">
+                    <img src="https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.0-9/117016318_2627913777470816_2980616075849348884_o.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_eui2=AeFe-_3aRQfCp3omq4fk60OLFS9Ub_Eu5dEVL1Rv8S7l0Z8kV3bwZrcuYCsU7uY_mjK1j5waUo_zVO-O47nrc9wn&_nc_ohc=9WUZ92T4b6EAX8zukZm&_nc_ht=scontent.fsrg1-1.fna&oh=699540a9356f5511076f7fab72c476d5&oe=5F95A527" 
+                    alt="" srcset="" class="rounded-circle">
+                    
+                    <p class="name">Andres F Sumihe</p>
+                    <p class="nim">672018136</p>
+                    <p class="role">Frontend Developer</p>
+                </div>
+                <div class="team-info-box">
+                    <img src="https://scontent.fsrg1-1.fna.fbcdn.net/v/t1.0-9/20375733_1856174961366014_2463874784972024758_n.jpg?_nc_cat=101&_nc_sid=09cbfe&_nc_eui2=AeGVzB69aut8r4xfUG0D-ikoJZw10Y_GrQMlnDXRj8atAycYEPZddaZCMSy-LG3vZ5YcYvxxEcN2-6CO3VX7BrIx&_nc_ohc=X0UMZY6QqY4AX_ERCbP&_nc_ht=scontent.fsrg1-1.fna&oh=b7f96a433b1065b07443ba046f829d4e&oe=5F977DE9" 
+                        alt="" srcset="" class="rounded-circle">
+
+                    <p class="name">Sean A Pattirane</p>
+                    <p class="nim">672018112</p>
+                    <p class="role">Fullstack Developer</p>
+                </div>
+            </div>
+
+            <div class="foot">
+                <p class="footer-text">
+                    Made With 
+                    <span><img src="https://img.icons8.com/fluent/20/000000/filled-like.png" alt=""></span>
+                    By 9 Fruits Creative Team
+                </p>
+            </div>
+        </div>
+        <div class="author-info-fab">
+            <img class="img-open" src="https://img.icons8.com/material-sharp/48/000000/user-group-man-woman.png"/>
+            <img class="img-close d-none" src="https://img.icons8.com/ios-filled/28/000000/x.png"/>
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="module" src="index.js" charset="utf-8"></script>
+
+    <script>
+        $(".author-info-fab").click(function() {
+            $('.author-info').toggleClass("open");
+            $('.img-open').toggleClass("d-none");
+            $('.img-close').toggleClass("d-none");
+        });
+    </script>
 </body>
 </html>

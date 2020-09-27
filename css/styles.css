@@ -147,3 +147,109 @@ section.sosial > ul li .dribbble:hover {
   font-family: "entypo", sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.author-info {
+	width: 290px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 15px;
+	box-shadow: 0px 12px 45px rgba(0, 0, 0, .15);
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+	opacity: 0;
+}
+.author-info.open {
+	height: 270px;
+	opacity: 1;
+}
+.author-info.popup {
+	-webkit-transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.author-info.popup > header{
+    padding: 10px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5em;
+}
+.author-info-fab {
+	width: 65px;
+	height: 65px;
+	background-color: #00aeef;
+	border-radius: 30px;
+    float: right;
+	box-shadow: 0px 12px 45px rgba(0, 0, 0, .3);
+	z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-info-fab:hover {
+    cursor: pointer;
+}
+.author-info-fab .wrap {
+    
+	transform: rotate(0deg);
+	-webkit-transition: all .15s cubic-bezier(0.15, 0.87, 0.45, 1.23);
+	transition: all .15s cubic-bezier(0.15, 0.87, 0.45, 1.23);
+}
+.author-info-fab .close {
+	background-position: -2px 1px;
+	transform: rotate(-45deg);
+	float: none;
+	/*Bootstrap Overide*/
+	opacity: 1;
+	/*Bootstrap Overide*/
+}
+.author-info-wrap {
+    position: fixed;
+	right: 25px;
+	bottom: 25px;
+	z-index: 1000;
+}
+
+.team-box {
+    width: 100%;
+    border: 1px #000 ;
+    display: flex;
+    flex-direction: row;
+}
+
+.team-info-box {
+    width: 50%;
+}
+
+.team-info-box > img {
+    width: 80px;
+
+}
+
+.team-info-box > .name {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    font-weight: 800;
+    margin: 10px 0px 0px 0px;
+    line-height: 8px;
+}
+.team-info-box > .nim {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: .7em;
+    margin: 0px;
+}
+.team-info-box > .role {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: .8em;
+    margin: 0px;
+}
+
+.foot {
+    margin-top: 15%;
+}
+.foot > p {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: .8em;
+}

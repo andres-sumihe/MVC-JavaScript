@@ -66,8 +66,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(topHeadline);
-        model.articles = articles;
+        // const articles = await API.getArticles(topHeadline);
+        // model.articles = articles;
     }
 })
 
@@ -86,8 +86,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(tech);
-        model.articles = articles;
+        // const articles = await API.getArticles(tech);
+        // model.articles = articles;
     }
 })
 
@@ -106,8 +106,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(business);
-        model.articles = articles;
+        // const articles = await API.getArticles(business);
+        // model.articles = articles;
     }
 })
 
@@ -126,8 +126,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(covid);
-        model.articles = articles;
+        // const articles = await API.getArticles(covid);
+        // model.articles = articles;
     }
 })
 
