@@ -4,7 +4,7 @@ class Model {
     }
         // 53247612da5c47c9a7d3f1625dfae99e
     async getArticles() {
-        let result = await fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=53247612da5c47c9a7d3f1625dfae99e")
+        let result = await fetch("https://newsapi.org/v2/top-headlines?country=id&apiKey=53247612da5c47c9a7d3f1625dfae99e")
         .then(response => response.json());
         return result.articles;
     
