@@ -22,7 +22,9 @@ class View {
        <div class="col-md-3 custom-row">
             <div class="card">
                 <div class="img-box">
-                    <img src="${model.urlToImage}" class="img-fluid"/>
+                    <img src="${model.urlToImage ? model.urlToImage : 'https://image.flaticon.com/icons/png/512/21/21601.png'}" 
+                    class="img-fluid ${!model.urlToImage ? nohover:""}"
+                    />
                 </div>
                 <div class="card-body">
                     <h6>${model.title}</h6>

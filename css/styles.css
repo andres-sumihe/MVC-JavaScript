@@ -21,9 +21,15 @@ header {
 
 .img-box > img {
     height: 200px;
+    
 }
 .img-box {
     overflow: hidden;
+    margin: auto;
+}
+
+.nohover:hover {
+    all:unset
 }
 .img-box > img:hover {
     transition: transform ease-in-out .5s;
