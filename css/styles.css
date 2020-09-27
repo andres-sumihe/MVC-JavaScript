@@ -1,6 +1,14 @@
 body{
     display: flex;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
+}
+.app .row {
+    margin:0;
+    max-width: 100vw !important;
 }
 header {
     text-align: center;
@@ -21,7 +29,6 @@ header {
     transition: transform ease-in-out .5s;
     transform: scale(1.2);
 }
-
 
 .card {
     height: 500px;
