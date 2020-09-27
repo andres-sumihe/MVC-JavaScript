@@ -23,7 +23,7 @@ class View {
             <div class="card">
                 <div class="img-box">
                     <img src="${model.urlToImage ? model.urlToImage : 'https://image.flaticon.com/icons/png/512/21/21601.png'}" 
-                    class="img-fluid ${!model.urlToImage ? nohover:""}"
+                    class="img-fluid ${!model.urlToImage ? "nohover" :""}"
                     />
                 </div>
                 <div class="card-body">
