@@ -1,10 +1,8 @@
 body{
-    display: flex;
     width: 100vw;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    flex-direction: column;
 }
 .app .row {
     margin:0;
@@ -14,7 +12,11 @@ header {
     text-align: center;
     font-size: 4em;
 }
-
+h4 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+}
 .custom-row {
     padding-top: 40px;
 }
@@ -51,3 +53,97 @@ header {
     position: absolute;
     bottom: 10px;
 }
+
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+section.sosial {
+    position: absolute;
+    top: 220px;
+    left: -50px;
+    z-index: 1;
+}
+section.sosial ul >  {
+  list-style: none;
+  
+  left: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+section.sosial > ul li a {
+  display: block;
+  margin-left: -2px;
+  height: 60px;
+  width: 60px;
+  border-radius: 0 25px 25px 0;
+  border: 2px solid #000;
+  background: #fff;
+  margin-bottom: 1em;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #2980b9;
+  text-decoration: none;
+  line-height: 60px;
+  position: relative;
+}
+section.sosial > ul li a:hover {
+  cursor: pointer;
+  width: 140px;
+  color: #fff;
+}
+section.sosial > ul li a:hover span {
+  left: 0;
+}
+section.sosial > ul li a span {
+  padding: 0 30px 0 15px;
+  position: absolute;
+  left: -120px;
+  -webkit-transition: left 0.4s ease;
+  transition: left 0.4s ease;
+}
+section.sosial > ul li a i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.5em;
+}
+section.sosial > ul li .spotify {
+  background: rgba(39, 174, 96, 0.1);
+  border-color: #27ae60;
+  color: #27ae60;
+}
+section.sosial > ul li .spotify:hover {
+  background: #27ae60;
+}
+section.sosial > ul li .soundcloud {
+  background: rgba(230, 126, 34, 0.1);
+  border-color: #e67e22;
+  color: #e67e22;
+}
+section.sosial > ul li .soundcloud:hover {
+  background: #e67e22;
+}
+section.sosial > ul li .skype {
+  background: rgba(34, 167, 240, 0.1);
+  border-color: #22a7f0;
+  color: #22a7f0;
+}
+section.sosial > ul li .skype:hover {
+  background: #22a7f0;
+}
+section.sosial > ul li .dribbble {
+  background: rgba(210, 82, 127, 0.1);
+  border-color: #d2527f;
+  color: #d2527f;
+}
+section.sosial > ul li .dribbble:hover {
+  background: #d2527f;
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif;
+}
+
