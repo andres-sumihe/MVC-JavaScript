@@ -4,6 +4,7 @@ import Model from './Model/Model.js';
 import View from './View/View.js';
 
 const controller = new Controller('#app');
+const covid = new Controller('#covid');
 const API = new Model();
 const router = new Router(controller);
 const view = new View();
@@ -66,8 +67,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(topHeadline);
-        model.articles = articles;
+        // const articles = await API.getArticles(topHeadline);
+        // model.articles = articles;
     }
 })
 
@@ -86,8 +87,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(tech);
-        model.articles = articles;
+        // const articles = await API.getArticles(tech);
+        // model.articles = articles;
     }
 })
 
@@ -106,8 +107,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(business);
-        model.articles = articles;
+        // const articles = await API.getArticles(business);
+        // model.articles = articles;
     }
 })
 
@@ -126,8 +127,8 @@ controller.addComponent({
     },
 
     async controller(model){
-        const articles = await API.getArticles(covid);
-        model.articles = articles;
+        // const articles = await API.getArticles(covid);
+        // model.articles = articles;
     }
 })
 

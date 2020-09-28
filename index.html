@@ -7,9 +7,46 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
     <title>MVC Design Pattern</title>
 </head>
 <body onload="javascript: window.location.href='#/'">
+    <section class="covid" id="covid">
+        <div class="covid-box">
+            <div class="covid-box_counter" id="confirmed">
+                <h1>TERKONFIRMASI</h1>
+                <p id="number"></p>
+                <p id="number-info"></p>
+            </div> 
+            <div class="covid-box_counter" id="active">
+                <h1>KASUS AKTIF</h1>
+                <p id="number"></p>
+                <p id="number-info"></p>
+            </div> 
+            <div class="covid-box_counter" id="recover">
+                <h1>SEMBUH</h1>
+                <p id="number"></p>
+                <p id="number-info"></p>
+            </div> 
+            <div class="covid-box_counter" id="died">
+                <h1>MENINGGAL</h1>
+                <p id="number"></p>
+                <p id="number-info"></p>
+            </div> 
+        </div>
+        <div class="toggle-covid">
+            <p>COVID-19</p>
+            <div class="left d-none">
+                <i class="fa fa-chevron-left chevron" aria-hidden="true"></i>
+            </div>
+            <div class="right">
+                <i class="fa fa-chevron-right chevron" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </section>
     <section class="sosial">
         <ul>
             <li>
@@ -123,6 +160,12 @@
             $('.author-info').toggleClass("open");
             $('.img-open').toggleClass("d-none");
             $('.img-close').toggleClass("d-none");
+        });
+        $(".toggle-covid").click(function() {
+            $('.covid-box').toggleClass("open");
+            $('.toggle-covid').toggleClass("open");
+            $('.right').toggleClass("d-none");
+            $('.left').toggleClass("d-none");
         });
     </script>
 </body>

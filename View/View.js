@@ -36,4 +36,8 @@ class View {
             </div>
         </div>`
     }
+
+    covidViews = (model) => {
+        
+    }
 } export default View;
