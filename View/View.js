@@ -37,7 +37,44 @@ class View {
         </div>`
     }
 
-    covidViews = (model) => {
-        
+    covidViews = (model1, model2) => {
+        return `<div class="covid-box ">
+            <p>DATA COVID</p>
+        <div class="covid-box_counter" id="confirmed">
+            <h1>TERKONFIRMASI</h1>
+            <p id="number">${model1.jumlah_positif ? model1.jumlah_positif : 0 }</p>
+            <p id="number-info">+${model2.jumlah_positif} Kasus</p>
+        </div> 
+        <div class="covid-box_counter" id="active">
+            <h1>KASUS AKTIF</h1>
+            <p id="number">${model1.jumlah_dirawat ? model1.jumlah_dirawat : 0}</p>
+            <p id="number-info">${(parseInt(model1.jumlah_dirawat, 10) / parseInt(model1.jumlah_positif) * 100).toFixed(2)}%
+                dari Terkonfirmasi
+            </p>
+        </div> 
+        <div class="covid-box_counter" id="recover">
+            <h1>SEMBUH</h1>
+            <p id="number">${model1.jumlah_sembuh ? model1.jumlah_sembuh : 0}</p>
+            <p id="number-info">${(parseInt(model1.jumlah_sembuh, 10) / parseInt(model1.jumlah_positif) * 100).toFixed(2)}%
+            dari Terkonfirmasi
+            </p>
+        </div> 
+        <div class="covid-box_counter" id="died">
+            <h1>MENINGGAL</h1>
+            <p id="number">${model1.jumlah_meninggal ? model1.jumlah_meninggal : 0}</p>
+            <p id="number-info">${(parseInt(model1.jumlah_meninggal, 10) / parseInt(model1.jumlah_positif,10) * 100).toFixed(2)}%
+            dari Terkonfirmasi
+            </p>
+        </div> 
+    </div>
+    <!--  <div class="toggle-covid " id="toggleCovid">
+        <div class="left ">
+            <i class="fa fa-chevron-left chevron" aria-hidden="true"></i>
+        </div>
+        <div class="right d-none">
+            <i class="fa fa-chevron-right chevron" aria-hidden="true"></i>
+        </div>
+    </div> -->
+    `
     }
 } export default View;
