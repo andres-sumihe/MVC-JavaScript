@@ -14,40 +14,8 @@
 </head>
 <body onload="javascript: window.location.href='#/'">
     <section class="covid" id="covid">
-        <div class="covid-box">
-            <div class="covid-box_counter" id="confirmed">
-                <h1>TERKONFIRMASI</h1>
-                <p id="number"></p>
-                <p id="number-info"></p>
-            </div> 
-            <div class="covid-box_counter" id="active">
-                <h1>KASUS AKTIF</h1>
-                <p id="number"></p>
-                <p id="number-info"></p>
-            </div> 
-            <div class="covid-box_counter" id="recover">
-                <h1>SEMBUH</h1>
-                <p id="number"></p>
-                <p id="number-info"></p>
-            </div> 
-            <div class="covid-box_counter" id="died">
-                <h1>MENINGGAL</h1>
-                <p id="number"></p>
-                <p id="number-info"></p>
-            </div> 
-        </div>
-        <div class="toggle-covid">
-            <p>COVID-19</p>
-            <div class="left d-none">
-                <i class="fa fa-chevron-left chevron" aria-hidden="true"></i>
-            </div>
-            <div class="right">
-                <i class="fa fa-chevron-right chevron" aria-hidden="true"></i>
-            </div>
-        </div>
-
     </section>
-    <section class="sosial">
+    <!-- <section class="sosial">
         <ul>
             <li>
               <a href="#" class="spotify"><span>Spotify</span><i class="entypo-spotify"></i></a>
@@ -62,9 +30,8 @@
               <a href="#" class="dribbble"><span>Dribbble</span><i class="entypo-dribbble"></i></a>
             </li>
           </ul>
-    </section>
+    </section> -->
     <div class="container">
-     
         <nav class=" navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#/">9Papers</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,12 +64,11 @@
             </div>
             </div>
         </nav>
-   
     </div>
     <section>
         <div class="row">
             <div class="col">
-                <header>News Portal Free</header>
+                <header id="headerTop">News Portal Free</header>
                 <h4>News App By 9 Fruits Creative Team</h4>
             </div>
         </div>
@@ -154,14 +120,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="module" src="index.js" charset="utf-8"></script>
-
     <script>
         $(".author-info-fab").click(function() {
             $('.author-info').toggleClass("open");
             $('.img-open').toggleClass("d-none");
             $('.img-close').toggleClass("d-none");
         });
-        $(".toggle-covid").click(function() {
+       //Jquery Function for handle Toogle Covid Button
+        $("#toggleCovid").click(function() {
             $('.covid-box').toggleClass("open");
             $('.toggle-covid').toggleClass("open");
             $('.right').toggleClass("d-none");

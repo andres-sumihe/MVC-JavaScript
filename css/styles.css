@@ -8,7 +8,8 @@ body{
     margin:0;
     max-width: 100vw !important;
 }
-header {
+#headerTop {
+  /* margin-top: 80px; */
     text-align: center;
     font-size: 4em;
 }
@@ -59,7 +60,7 @@ h4 {
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 section.sosial {
     position: fixed;
-    top: 300px;
+    top: 400px;
     left: -50px;
     z-index: 1;
 }
@@ -169,7 +170,7 @@ section.sosial > ul li .dribbble:hover {
 	-webkit-transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.author-info.popup > header{
+.author-info.popup > header {
     padding: 10px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5em;
@@ -259,26 +260,34 @@ section.sosial > ul li .dribbble:hover {
 
 section.covid {
   position: fixed;
-  width: 300px;
-  height: 240px;
+  width: 160px;
+  height: 380px;
   left: 0;
-  top: 60px;
+  top: 140px;
+  z-index: 2;
 }
 
 section.covid > div.covid-box {
+  border-radius: 20px;
   margin-right: auto;
-  margin-left: -100%;
+  /* margin-left: -100%; */
   margin-top: 20px;
   padding: 10px;
-  width: 90%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   background-color:#f2f2f2;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   -webkit-transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	        transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          
+  z-index: 2;
+}
+section.covid > div.covid-box >p {
+  margin:0;
+  margin:auto;
 }
 
 section.covid > div.covid-box.open {
@@ -286,13 +295,13 @@ section.covid > div.covid-box.open {
   
 }
 section.covid > div.toggle-covid.open {
-  transform: translateX(270px);
+  transform: translateX(240px);
   
 }
 
 section.covid > div.covid-box > div.covid-box_counter {
-  width: 48%;
-  height: 40%;
+  width: 98%;
+  height: 21%;
   /* margin: 20px; */
 }
 div.covid-box_counter#confirmed{background-color: #2C347C;}
@@ -318,8 +327,8 @@ section.covid > div.covid-box > div.covid-box_counter > p#number {
 section.covid > div.covid-box > div.covid-box_counter > p#number-info {
   margin: unset;
   color: #fff;
-  padding-left: 10px;
-  font-size: .6em;
+  text-align: center;
+  font-size: .7em;
   margin-top: 16px;
 }
 
@@ -330,17 +339,14 @@ section.covid > div.covid-box > div.covid-box_counter > p#number-info {
   justify-content: flex-end;
   align-items: center;
   /* margin-left: -30px ; */
-  width: 90px;
+  width: 60px;
   height: 60px;
   border-top-right-radius: 45%;
   border-bottom-right-radius: 45%;
   top: 90px;
   z-index: -1;
   -webkit-transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	        transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.toggle-covid>p {
-  font-size: .8em;
+          transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .toggle-covid:hover {
   cursor: pointer;
